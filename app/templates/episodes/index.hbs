@@ -1,25 +1,33 @@
-<div id="home">
-  <div class="container">
-    <ul class="episodes">
+<div>
+  <div class="mx-auto w-4/5">
+    <ul class="flex flex-wrap justify-between mt-4">
       {{#each model as |episode|}}
-        <li>
-          {{#if episode.playing}}
-            <a class="play" href="#" {{action "pause"}}>
-              <div class="play-button">
-                {{fa-icon "pause"}}
-              </div>
-            </a>
-          {{else}}
-            <a class="play" href="#" {{action "play" episode}}>
-              <div class="play-button">
-                {{fa-icon "play"}}
-              </div>
-            </a>
-          {{/if}}
-          {{#link-to "episodes.show" episode.slug class="details"}}
-            <h1>{{episode.title}}</h1>
-            <p>Episode {{episode.number}} &bull; {{episode.prettyReleaseDate}}</p>
-            {{fa-icon "angle-right"}}
+        <li class="w-49-p mb-4 bg-gray-100 rounded-lg border-gray-400 border flex">
+          <div class="flex ml-4">
+             {{#if episode.playing}}
+              <a class="play self-center relative" href="#" {{action "pause"}}>
+                <div class="bg-orange-300 text-white text-lg rounded-full w-10 h-10 flex items-center justify-center orange-outline">
+                  {{fa-icon "pause"}}
+                </div>
+              </a>
+            {{else}}
+              <a class="play self-center relative" href="#" {{action "play" episode}}>
+                <div class="bg-orange-300 text-white text-lg rounded-full w-10 h-10 flex items-center justify-center orange-outline">
+                  {{fa-icon "play" class="pl-1"}}
+                </div>
+              </a>
+            {{/if}}
+          </div>
+
+          {{#link-to "episodes.show" episode.slug class="flex flex-1 justify-center align"}}
+
+            <div class="flex-1 py-4 pl-4">
+              <h1 class="text-orange-300 font-bold">{{episode.title}}</h1>
+              <p class="text-gray-700 text-sm font-light">Episode {{episode.number}} &bull; {{episode.prettyReleaseDate}}</p>
+            </div>
+
+            {{fa-icon "angle-right" class="text-3xl text-gray-500 self-center mr-4"}}
+
           {{/link-to}}
         </li>
       {{/each}}

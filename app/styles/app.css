@@ -22,3 +22,22 @@ body > div.ember-view {
 .-right-4 {
   right: -1rem;
 }
+
+.w-49-p {
+  width: 49%;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
+.orange-outline:before {
+  content: "";
+  border: 1px solid #e24c32;
+  border-radius: 9999px;
+  position: absolute;
+  top: -0.25rem;
+  bottom: -0.25rem;
+  left: -0.25rem;
+  right: -0.25rem;
+}
