@@ -36,8 +36,12 @@ body > div.ember-view {
   border: 1px solid #e24c32;
   border-radius: 9999px;
   position: absolute;
-  top: -0.25rem;
-  bottom: -0.25rem;
-  left: -0.25rem;
-  right: -0.25rem;
+  top: -0.30rem;
+  bottom: -0.30rem;
+  left: -0.30rem;
+  right: -0.30rem;
+}
+
+.h-full > .liquid-child {
+  height: 100%;
 }

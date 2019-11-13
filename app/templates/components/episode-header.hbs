@@ -1,17 +1,17 @@
-<div class="container">
-  {{#if playing}}
-    <a class="play" href="#" {{action "pause"}}>
-      <div class="play-button">
+<div class="flex flex-col p-6">
+  {{#if episode.playing}}
+    <a class="play self-center relative" href="#" {{action "pause"}}>
+      <div class="bg-orange-300 text-white text-lg rounded-full w-10 h-10 flex items-center justify-center orange-outline">
         {{fa-icon "pause"}}
       </div>
     </a>
   {{else}}
-    <a class="play" href="#" {{action "play" episode}}>
-      <div class="play-button">
-        {{fa-icon "play"}}
+    <a class="play self-center relative" href="#" {{action "play" episode}}>
+      <div class="bg-orange-300 hover:bg-orange-200 text-white text-lg rounded-full w-10 h-10 flex items-center justify-center orange-outline">
+        {{fa-icon "play" class="pl-1"}}
       </div>
     </a>
   {{/if}}
-  <h1>{{title}}</h1>
-  <p>Episode {{number}} &bull; {{prettyReleaseDate}}</p>
+  <h1 class="mt-4 mb-4 text-lg font-bold text-black text-center">{{title}}</h1>
+  <p class="text-sm font-light text-center">Episode {{number}} &bull; {{prettyReleaseDate}}</p>
 </div>

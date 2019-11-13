@@ -1,9 +1,9 @@
-<img alt="picture of {{name}}" src={{avatarURL}}>
+<img alt="picture of {{name}}" src={{avatarURL}} class="rounded-lg mr-6 h-56">
 <div class="guest_bio">
-  <h3>Our Guest this Weekend</h3>
-  <h1>
-    <a href={{guestInfoURL}} rel="noopener" target="_blank">{{name}}</a>
+  <h3 class="uppercase text-gray-700 text-xs font-bold mb-2">Our Guest this Weekend</h3>
+  <h1 class="text-lg font-bold ">
+    <a class="text-orange-250" href={{guestInfoURL}} rel="noopener" target="_blank">{{name}}</a>
   </h1>
-  <p>{{tagLine}}</p>
-  <p class="bio">{{bio}}</p>
+  <p class="mb-4 font-thin">{{tagLine}}</p>
+  <p class="font-thin text-sm">{{bio}}</p>
 </div>

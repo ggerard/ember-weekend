@@ -17,12 +17,17 @@ module.exports = {
       black: '#000',
       white: '#fff',
 
+      'twitter-blue': '#55acee',
+
       gray: {
         100: '#fafafa',
+        150: '#f2f2f2',
         200: '#eaeaea',
         300: '#e2e8f0',
+        350: '#dddddd',
         400: '#d3d3d3',
         500: '#afafaf',
+        550: '#939393',
         600: '#5b5b5b',
         700: '#333333',
         800: '#303030',
@@ -42,6 +47,7 @@ module.exports = {
       orange: {
         100: '#f5c0b7',
         200: '#ff3714',
+        250: '#fa3a1a',
         300: '#e24c32',
       },
       yellow: {
@@ -245,6 +251,10 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
+      body: [
+        'Open Sans',
+        'sans-serif',
+      ]
     },
     fontSize: {
       xs: '0.75rem',

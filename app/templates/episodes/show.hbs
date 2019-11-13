@@ -1,5 +1,5 @@
 {{#episode-show episode=episode}}
-  {{#note-list }}
+  {{#note-list}}
     {{#each episode.guests as |guest|}}
       {{guest-item name=guest.name guestInfoURL=guest.guestInfoURL avatarURL=guest.avatarURL tagLine=guest.tagline bio=guest.bio}}
     {{/each}}
@@ -7,20 +7,20 @@
       {{#note-item time=note.timeStamp episode=episode}}
         {{#if note.resource.url}}
           {{#link-to-site href=note.resource.url}}
-            {{#external-title}}
+            {{#external-title class="text-sm font-bold"}}
               {{note.title}}
             {{/external-title}}
           {{/link-to-site}}
         {{else}}
-          <h1>
+          <h1 class="text-sm font-bold">
             {{note.title}}
           </h1>
         {{/if}}
-        <p>
+        <p class="text-sm font-thin">
           {{#each note.resource.authors as |author|}}
             by
             {{#if author.url}}
-              {{#link-to-site href=author.url}}
+              {{#link-to-site href=author.url class="text-orange-200"}}
                 {{author.name}}
               {{/link-to-site}}
             {{else}}
