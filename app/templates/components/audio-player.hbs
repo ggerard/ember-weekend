@@ -1,14 +1,15 @@
 <div class="flex border-t border-gray-400 px-3 md:px-16 lg:px:32">
   {{play-pause-toggle play=(action "play") pause=(action "pause") bubbles=false}}
-  <p class="pt-4 xs:pt-8 sm:pb-8 pl-2 sm:pr-10 ">
-    <time class="font-normal text-gray-800 px-2">{{player.currentTime}}</time>
+  <div class="pt-4 xs:pt-8 sm:pb-8 pl-2 sm:pr-10 w-full">
+    <time class="hidden xs:inline-block font-normal text-gray-800 px-2">{{player.currentTime}}</time>
     <div class="block xs:inline-block">
-      <span class="text-sm xs:text-base font-semibold text-orange-300 hover:text-orange-200">{{player.title}}</span>
+      <span class="text-sm md:text-base font-semibold text-orange-300 hover:text-orange-200">{{player.title}}</span>
     </div>
-    <div class="block xs:inline-block">
-      <time class="font-light text-gray-500 hover:text-black px-2" datetime={{player.releaseDate}}>{{player.releaseDate}}</time>
+    <div class="w-full sm:w-auto block xs:inline-block flex flex-row items-center">
+      <time class="inline-block xs:hidden font-normal text-gray-800 px-2">{{player.currentTime}}</time>
+      <time class="m-0 xs:ml-10 sm:m-0 font-light text-xs xs:text-base text-gray-600 hover:text-black px-2" datetime={{player.releaseDate}}>{{player.releaseDate}}</time>
     </div>
-  </p>
+  </div>
 </div>
 <div class="h-2 absolute top-0 left-0 bg-orange-100 cursor-pointer" style={{bufferStyle}}></div>
 <div class="h-2 absolute top-0 left-0 bg-orange-300 cursor-pointer" style={{progressStyle}}>
