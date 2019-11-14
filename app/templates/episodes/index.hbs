@@ -4,7 +4,7 @@
       {{#each model as |episode|}}
         <li class="w-full md:w-49-p md:mb-4 bg-gray-100 md:rounded border-gray-400 border flex">
           <div class="flex mx-4">
-             {{#if episode.playing}}
+            {{#if episode.playing}}
               <a class="play self-center relative" href="#" {{action "pause"}}>
                 <div class="bg-orange-300 hover:bg-orange-200 text-white text-lg rounded-full w-10 h-10 flex items-center justify-center orange-outline">
                   {{fa-icon "pause"}}
